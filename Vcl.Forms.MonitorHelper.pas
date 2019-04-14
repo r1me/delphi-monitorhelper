@@ -101,7 +101,7 @@ begin
   ZeroMemory(@displayDevice, SizeOf(displayDevice));
   displayDevice.cb := SizeOf(displayDevice);
 
-  if EnumDisplayDevices(nil, Self.FMonitorNum, displayDevice, 0) then
+  if EnumDisplayDevices(nil, Self.MonitorNum, displayDevice, 0) then
   begin
     devName := displayDevice.DeviceName;
     EnumDisplayDevices(PChar(devName), 0, displayDevice, 0);
@@ -119,7 +119,7 @@ begin
   ZeroMemory(@displayDevice, SizeOf(displayDevice));
   displayDevice.cb := SizeOf(displayDevice);
 
-  if EnumDisplayDevices(nil, Self.FMonitorNum, displayDevice, 0) then
+  if EnumDisplayDevices(nil, Self.MonitorNum, displayDevice, 0) then
   begin
     ZeroMemory(@devMode, SizeOf(devMode));
     devMode.dmSize := SizeOf(devMode);
@@ -139,7 +139,7 @@ begin
   ZeroMemory(@displayDevice, SizeOf(displayDevice));
   displayDevice.cb := SizeOf(displayDevice);
 
-  if EnumDisplayDevices(nil, Self.FMonitorNum, displayDevice, 0) then
+  if EnumDisplayDevices(nil, Self.MonitorNum, displayDevice, 0) then
   begin
     ZeroMemory(@devMode, SizeOf(devMode));
     devMode.dmSize := SizeOf(devMode);
@@ -171,7 +171,7 @@ begin
   ZeroMemory(@displayDevice, SizeOf(displayDevice));
   displayDevice.cb := SizeOf(displayDevice);
 
-  if EnumDisplayDevices(nil, Self.FMonitorNum, displayDevice, 0) then
+  if EnumDisplayDevices(nil, Self.MonitorNum, displayDevice, 0) then
   begin
     ZeroMemory(@devMode, SizeOf(devMode));
     devMode.dmSize := SizeOf(devMode);
